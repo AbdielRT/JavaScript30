@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>JS + CSS Clock</title>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script defer src="js/app.js"></script>
 </head>
 <body>
 
@@ -64,6 +66,18 @@
       top: 50%;
     }
 
+    .hour-hand {
+      transform-origin: right;
+      transition: 1.8s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    .min-hand {
+      transform-origin: right;
+      transition: 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    .second-hand {
+      transform-origin: right;
+      transition: 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+    }
   </style>
 
   <script>
