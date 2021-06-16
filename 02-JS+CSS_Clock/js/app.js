@@ -11,10 +11,10 @@ setInterval(function(){
 // corresponding degrees depending on hours, minutes and secs.
 
 // Version with hour hand fixed in current hour position the whole hour
-	$('.hour-hand').css({'transform':`rotate(${hh * 30 + 90}deg)`});
+//	$('.hour-hand').css({'transform':`rotate(${hh * 30 + 90}deg)`});
 
 // Reproduces mechanical clock hour hand 
-//	$('.hour-hand').css({'transform':`rotate(${hh * 30 + 90 + mm/2}deg)`});
+	$('.hour-hand').css({'transform':`rotate(${hh * 30 + 90 + mm/2}deg)`});
 
 	$('.min-hand').css({'transform':`rotate(${mm * 6 + 90}deg)`});
 	$('.second-hand').css({'transform':`rotate(${ss * 6 + 90}deg)`});
