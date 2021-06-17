@@ -18,8 +18,6 @@ var alphaBands = bands.sort(function(a,b){
 
 const list = document.querySelector('#bands');
 
-//alphaBands.forEach(band => list.innerHTML = `<li>${band}</li>`);
+// Writes li tags inside ul for each corresponding sorted band name
+alphaBands.forEach(band => list.innerHTML += `<li>${band}</li>`);
 
-for (i in alphaBands){
-	list.innerHTML += `<li>${alphaBands[i]}</li>`;
-}
