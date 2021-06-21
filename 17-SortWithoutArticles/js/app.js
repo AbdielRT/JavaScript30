@@ -21,3 +21,4 @@ const list = document.querySelector('#bands');
 // Writes li tags inside ul for each corresponding sorted band name
 alphaBands.forEach(band => list.innerHTML += `<li>${band}</li>`);
 
+
