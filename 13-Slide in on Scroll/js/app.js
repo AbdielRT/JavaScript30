@@ -4,13 +4,15 @@ function imgOnScroll() {
 
   imgs.forEach(imagen => {
 // scroll position to middle height of an image
-    var midImage = window.scrollY + window.innerHeight - (imagen.height / 2);
-// verifies if an image top has surpassed the scroll position midImage  
-    if (midImage > imagen.offsetTop ){
-// if so, includes active class to slide in image.
+    var scrollToMidImage = window.scrollY + window.innerHeight - (imagen.height*0.5);
+// computes position at image bottom
+    var bottomImage = imagen.offsetTop + imagen.height*0.2;
+// verifies if an image is in viewport
+    if (scrollToMidImage > imagen.offsetTop && window.scrollY < bottomImage){
+// if so, includes active class to slide in the image.
       imagen.classList.add('active');
     } else {
-// removes the image when scroll back up
+// slides out image if it is about to go out of viewport
       imagen.classList.remove('active');
     }
   });
